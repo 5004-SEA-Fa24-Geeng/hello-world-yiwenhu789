@@ -47,7 +47,7 @@ An observant reader will notice that many of the learning objectives have very l
 
 ## Assumptions
 
-This homework assumes you have installed your favorite IDE (IntelliJ or VS Code) and installed the recommended plugins or extension as listed in the [5004 Resources](https://github.com/CS5004-khoury-lionelle/Resources) repository. Additionally, you will need to make sure gradle and java are installed. You can confirm they are installed by going to the command line and typing `java -version` and `gradle -version`. If you get a version number, you are good to go. If you get an error, you will need to install them or check your environment variables.
+This homework assumes you have installed your favorite IDE (IntelliJ or VS Code) and installed the recommended plugins or extension as listed in the [5004 Resources](https://northeastern.instructure.com/courses/211361/assignments/2588407) page. Additionally, you will need to make sure gradle and java are installed. You can confirm they are installed by going to the command line and typing `java -version` and `gradle -version`. If you get a version number, you are good to go. If you get an error, you will need to install them or check your environment variables.
 
 You should have also clicked on the link in the Canvas assignment shell to generate your github repo from the github classroom. As a reminder, you need a Github.com account! Don't use the Khoury Github Enterprise account, as it will not work with github classroom. 
 
@@ -174,7 +174,7 @@ or in windows
 > to be able to run both in the IDE and on the command line/terminal. 
 > 
 
-This will attempt to compile your code.  You an also attempt to compile your code using the IDE. In VS Code, this looks like a small `[run]` above the `main` method. In IntelliJ, it looks like a green play button.
+This will attempt to compile your code.  You an also attempt to compile your code using the IDE. In VS Code, this looks like a **small `[run]` above the `main` method**. In IntelliJ, it looks like a **green play button**.
 
 If you have compile errors, you will need to fix them. If you are having trouble, you can ask the TAs for help.
 
@@ -246,6 +246,7 @@ Legend:
 * AG - Auto-graded
 * MG - Manually graded
 
+<!---
 ### Submission Reminder 🚨
 For manually graded elements, we only guarantee time to submit for a regrade IF you submit by the DUE DATE. Submitting late may mean it isn't possible for the MG to be graded before the AVAILABLE UNTIL DATE, removing any windows for you to resubmit in time. While it will be graded, it is always best to submit by the due date, so you have full opportunity to improve your grade.
 
@@ -255,6 +256,7 @@ If you need a reminder about the grading policy, please review the syllabus and 
 > For this class, we give about a month for the **available until date**. This means you will 
 > only have a few manual resubmission attempts, and most everyone uses at least one! As such it is 
 > essential you submit on time!
+-->
 
 
 ### Autograder Limitation
@@ -262,7 +264,7 @@ Currently the autograder is limited in how it can test. As such, when it comes a
 
 
 > [!TIP]
-> Don't forget to look at the [Resources](https://github.com/CS5004-khoury-lionelle/Resources) repo for links to help you out with markdown!
+> Don't forget to look at the [Resources](https://northeastern.instructure.com/courses/211361/assignments/2588407) repo for links to help you out with markdown!
 
 
 Last, but not least - you got this!
