@@ -7,10 +7,57 @@ The following report contains questions you need to answer as part of your submi
 Please link your UML design file here. See resources in the assignment on how to
 link an image in markdown. You may also use [mermaid] class diagrams if you prefer, if so, include the mermaid code here.  You DO NOT have to include Greeting.java as part of the diagram, just the AlohaWorld application that includes: [AlohaWorld.java], [Greeter.java], and [ConsoleView.java].
 
+![UML](UML.png "UML")
+
+classDiagram
+
+class AlohaWorld {
+- AlohaWorld()
++ main(String[] args)
+  }
+
+class ConsoleView {
+- Scanner SCANNER
+- List~String~ LOCALITY_OPTIONS
+- ConsoleView()
++ getName() String
++ getLocality() int
++ checkRunAgain() boolean
++ printGreeting(String greeting)
+  }
+
+class Greeter {
+- final String name
+- int locality
+- static List~String~ localityList
+- static int HAWAII
+- static int CHINA
+- static int ITALY
+- static int DEFAULT_LOCALITY
++ Greeter(String name)
++ Greeter(String name, int locality)
++ getName() String
++ getLocality() int
++ setLocality(int locality)
++ greet() String
++ greet(boolean asciiOnly) String
+- getLocalityString() String
++ hashCode() int
++ equals(Object obj) boolean
++ toString() String
++ getLocalityList() List~String~
+  }
+
+AlohaWorld --> ConsoleView : "Uses"  
+AlohaWorld --> Greeter : "Creates"  
+ConsoleView --> Greeter : "Accesses Locality"
+
 
 
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
+
+The program starts in the AlohaWorld class. It first asks the user for their name and location using methods from the ConsoleView class. Then, it creates a Greeter object with this information and gets a greeting from the Greeter, then use ConsoleView to display the greeting. This process repeats until the user answered "n" or "no". Each class has its job: ConsoleView handles user input and output, Greeter creates greetings, and AlohaWorld runs the program.
 
 
 ## Assignment Questions
@@ -18,15 +65,20 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 1. List three additional java syntax items you didn't know when reading the code.  (make sure to use * for the list items, see example below, the backtick marks are used to write code inline with markdown)
    
    * (example) `final class`
+   * `Scanner.nextLine()`
+   * `trim()`
+   * `String.format()`
 
 2. For each syntax additional item listed above, explain what it does in your own words and then link a resource where you figured out what it does in the references section. 
 
     * (example) The `final` keyword when used on a class prevents the class from being subclassed. This means that the class cannot be extended by another class. This is useful when you want to prevent a class from being modified or extended[^1] . It is often the standard to do this when a class only contains static methods such as driver or utility classes. Math in Java is an example of a final class[^2] .
+    * The `Scanner.nextLine()` is used to read an entire line of input from the user, including spaces[^3].
+    * The `trim()`
+    * The `String.format()`
 
 3. What does `main` do in Java? 
 
     Go ahead and answer the question as a short paragraph / few sentences. Notice the indent, this is valid because it is a list item. (erase this line before writing.)
-
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
@@ -65,6 +117,8 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 [^1]: Final keyword in Java: 2024. https://www.geeksforgeeks.org/final-keyword-in-java/. Accessed: 2024-03-30. 
 
 [^2]: Math (Java Platform SE 17). https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html. Accessed: 2024-03-30.
+
+[^3]: https://www.geeksforgeeks.org/scanner-nextline-method-in-java-with-examples/. Accessed: 2025-01-23.
 
 
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
