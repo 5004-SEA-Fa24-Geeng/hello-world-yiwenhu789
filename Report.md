@@ -73,25 +73,28 @@ The program starts in the AlohaWorld class. It first asks the user for their nam
 
     * (example) The `final` keyword when used on a class prevents the class from being subclassed. This means that the class cannot be extended by another class. This is useful when you want to prevent a class from being modified or extended[^1] . It is often the standard to do this when a class only contains static methods such as driver or utility classes. Math in Java is an example of a final class[^2] .
     * The `Scanner.nextLine()` is used to read an entire line of input from the user, including spaces[^3].
-    * The `trim()`
-    * The `String.format()`
+    * The `trim()`is used to removes the leading and trailing spaces from a string, and rest of the string remain unchanged[^4]. 
+    * The `String.format()` this method allows user to create a formatted string using placeholders for values.  [^5].
 
-3. What does `main` do in Java? 
+3. What does `main` do in Java?  
+   * 'main' is a method that the Java virtual machine looks for and call while running a java application. The main () method serves as the entry point for program execution. When the program start to execute, the JVM calls main() to begin execution, this method act as foundation of a program, arrange how components interact to achieve the desired functionality.
 
-    Go ahead and answer the question as a short paragraph / few sentences. Notice the indent, this is valid because it is a list item. (erase this line before writing.)
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
+   * The toString() method in Java turns an object into a readable string that describes it. Adding a toString() method makes debugging and logging easier and ensures that objects are more readable when printed.
 
-    Same as above - short answer
+    
 
-5. What is javadoc style commenting? What is it used for? 
+5. What is javadoc style commenting? What is it used for?  
+   The Javadoc style commenting is standardized as write comments in java that start with /**, and end with */. Javadoc comments are processed by the Javadoc tool to generate HTML documentation of the code that serves as a reference for developers. Javacode ensures that code is well-documented, at the same time, it is easier for others to read and understand the meaning of the code. 
 
-    Same as above - short answer
+    
 
 
-6. Describe Test Driving Development (TDD) in your own words. 
+6. Describe Test Driving Development (TDD) in your own words.  
+    Test-Driven Development (TDD) is a way of building software where you write tests before writing the actual code. You start by creating a test for what the code should do, then write just enough code to make the test pass. Once the test passes, you can clean up or improve the code, repeating this process for each new feature or fix.
 
-    Same as above - short answer    
+        
 
 7. Go to the [Markdown Playground](MarkdownPlayground.md) and add at least 3 different markdown elements you learned about by reading the markdown resources listed in the document. Additionally you need to add a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that there). Add the elements into the markdown file, so that the formatting changes are reserved to that file. 
 
@@ -102,9 +105,11 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 
 1. Why would we want to keep interaction with the client contained to ConsoleView?
+   * Keep interacting with clients only in ConsoleView makes the program more organized and easier to manage. If user need to change how input or output works, user does not need to rewrite everything. This also keeps the rest of the code focused on logic and makes it easier to test and reuse.
 
 
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
+    * We could follow the similar strategy as Greeting.java where we introduce the String.format to create a class that only pre-define the format of each greeting, like necessary components of a greeting. With this format, we allow user to set up their greeting words as an input while constructing this class, and this class will then apply their input language into the format of the string to generate the complete greetings.  
 
 
 
@@ -119,6 +124,10 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 [^2]: Math (Java Platform SE 17). https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html. Accessed: 2024-03-30.
 
 [^3]: https://www.geeksforgeeks.org/scanner-nextline-method-in-java-with-examples/. Accessed: 2025-01-23.
+
+[^4]: https://www.geeksforgeeks.org/java-string-trim-method-example/. Accessed: 2024- 11-27. 
+
+[^5]: https://www.geeksforgeeks.org/java-string-format-method-with-examples/. Accessed: 2025-01-04
 
 
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
